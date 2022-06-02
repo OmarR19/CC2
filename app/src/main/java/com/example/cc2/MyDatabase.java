@@ -43,5 +43,16 @@ public class MyDatabase extends SQLiteOpenHelper {
 
     }
 
+    public static void UpdateEntreprise(SQLiteDatabase db, Entreprise e){
+
+        ContentValues ct = new ContentValues();
+        ct.put(String.valueOf(COL1),e.getId());
+        ct.put(COL2,e.getRaisonSoc());
+        ct.put(e.getAdresse(), COL3);
+        ct.put(String.valueOf(COL4),e.getCapital());
+
+        db.update(TABLE_NAME,ct,"id="+e.getId(),null);
+    }
+
 
 }
