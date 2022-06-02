@@ -98,7 +98,37 @@ public class EditerEntreprise extends AppCompatActivity {
 
         alert.show();
     }
+    public void Supprimer(View view) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(EditerEntreprise.this);
+        alert.setTitle("Suppression produit");
+        alert.setMessage("Voulez-vous supprimer ce produit ?");
+        alert.setIcon(R.drawable.delete);
 
+        alert.setPositiveButton("Supprimer", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Entreprise e = etrp.get(sp.getSelectedItemPosition());
+
+                if(MyDatabase.UpdateEntreprise(db.getWritableDatabase(),e.getId());==-1)
+                Toast.makeText(EditerEntreprise.this, "suppression echoue", Toast.LENGTH_SHORT).show();
+                    else {
+                    Toast.makeText(EditerEntreprise.this, "Suppression reussie", Toast.LENGTH_SHORT).show();
+                    adptr.remove(e.getId() + " - " + e.getRaisonSoc());
+                }
+            }
+        });
+
+        alert.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(EditerEntreprise.this, "Operation annulee", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        alert.show();
+    }
 }
 
-}
+
+
+
