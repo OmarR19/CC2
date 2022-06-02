@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,5 +32,37 @@ public class AjouterEntreprise extends AppCompatActivity {
     public void Annuler(View view){
         Intent it=new Intent(this, MainActivity.class);
         startActivity(it);
+    }
+
+    public void Enregistrer(View view) {
+
+        if(ed1.getText().toString().isEmpty()){
+            Toast.makeText(this, "Raison Sociale vide", Toast.LENGTH_SHORT).show();
+            ed1.requestFocus();
+            return;
+        }
+        if(ed2.getText().toString().isEmpty()){
+            Toast.makeText(this, "Adresse vide", Toast.LENGTH_SHORT).show();
+            ed2.requestFocus();
+            return;
+        }
+        if(ed3.getText().toString().isEmpty()){
+            Toast.makeText(this, "Capitale vide", Toast.LENGTH_SHORT).show();
+            ed3.requestFocus();
+            return;
+        }
+
+        Entreprise e = new Entreprise();
+
+        e.setRaisonSoc(ed1.getText().toString());
+        e.setAdresse(ed2.getText().toString());
+        e.setCapital(Double.parseDouble(ed3.getText().toString());
+
+        if(MyDatabase.AddEntreprise(db.getWritableDatabase(),e);==-1)
+            Toast.makeText(this, "Enregistrement echoue", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(this, "Enregistrement reussie", Toast.LENGTH_SHORT).show();
+
+
     }
 }
