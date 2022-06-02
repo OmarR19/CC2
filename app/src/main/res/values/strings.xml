@@ -12,5 +12,12 @@
     <string name="btnaa">Enregistrer</string>
     <string name="btnbb">Annuler</string>
 
+    <string name="ed11">Taper votre Raison Sociale</string>
+    <string name="ed22">Taper votre Adresse</string>
+    <string name="ed33">Taper votre Capitale</string>
+
+    <string name="btna1">Enregistrer</string>
+    <string name="btnb1">Annuler</string>
+
 
 </resources>
