@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CC2</string>
+    <string name="app_name">Menu Générale</string>
 
     <string name="btnAjouter">Ajouter une Entreprise</string>
     <string name="btnEditer">Editer une Entreprise</string>
