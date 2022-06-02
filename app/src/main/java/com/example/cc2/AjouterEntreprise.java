@@ -57,11 +57,11 @@ public class AjouterEntreprise extends AppCompatActivity {
         e.setRaisonSoc(ed1.getText().toString());
         e.setAdresse(ed2.getText().toString());
         e.setCapital(Double.parseDouble(ed3.getText().toString());
-
-        if(MyDatabase.AddEntreprise(db.getWritableDatabase(),e);==-1)
-            Toast.makeText(this, "Enregistrement echoue", Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(this, "Enregistrement reussie", Toast.LENGTH_SHORT).show();
+        //Le code de question Enregister problème dans ==-1;
+        //if(MyDatabase.AddEntreprise(db.getWritableDatabase(),e);==-1)
+          //  Toast.makeText(this, "Enregistrement echoue", Toast.LENGTH_SHORT).show();
+        //else
+          //  Toast.makeText(this, "Enregistrement reussie", Toast.LENGTH_SHORT).show();
 
 
     }
