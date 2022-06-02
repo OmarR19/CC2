@@ -33,15 +33,15 @@ public class EditerEntreprise extends AppCompatActivity {
             db = new MyDatabase(this);
 
             ed11 = findViewById(R.id.ed11);
-            ed22 = findViewById(R.id.editfam);
-            epa = findViewById(R.id.editpa);
-            epv = findViewById(R.id.editpv);
+            ed22 = findViewById(R.id.ed22);
+            ed33 = findViewById(R.id.ed33);
 
-            prds = MyDBProduit.getAllprods(db.getReadableDatabase());
+
+            etrp = MyDatabase.getAllEntreprise(db.getReadableDatabase());
 
             ArrayList<String> nomsProds = new ArrayList<>();
-            for(Produit pp: prds)
-                nomsProds.add(pp.getId() + " - " + pp.getLibelle());
+            for(Entreprise ee: etrp)
+                nomsProds.add(ee.getId() + " - " + ee.getRaisonSoc());
 
             adptr = new ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,nomsProds);
             sp.setAdapter(adptr);
@@ -100,8 +100,8 @@ public class EditerEntreprise extends AppCompatActivity {
     }
     public void Supprimer(View view) {
         AlertDialog.Builder alert = new AlertDialog.Builder(EditerEntreprise.this);
-        alert.setTitle("Suppression produit");
-        alert.setMessage("Voulez-vous supprimer ce produit ?");
+        alert.setTitle("Suppression Entreprise");
+        alert.setMessage("Voulez-vous supprimer ce l'entreprise ?");
         alert.setIcon(R.drawable.delete);
 
         alert.setPositiveButton("Supprimer", new DialogInterface.OnClickListener() {
