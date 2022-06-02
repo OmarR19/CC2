@@ -11,21 +11,24 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajouter une Entreprise">
+        android:text="Ajouter une Entreprise"
+        android:id="@+id/btnAjouter">
 
     </Button>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Editer une Entreprise">
+        android:text="Editer une Entreprise"
+        android:id="@+id/btnEditer">
 
     </Button>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Liste de tous les Entreprises">
+        android:text="Liste de tous les Entreprises"
+        android:id="@+id/btnListe">
 
     </Button>
 
