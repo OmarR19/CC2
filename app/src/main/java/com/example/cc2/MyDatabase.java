@@ -19,10 +19,10 @@ public class MyDatabase extends SQLiteOpenHelper {
     public static String COL3="Adresse";
     public static double COL4= Double.parseDouble("Capital");
 
-
-    public MyDatabase(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public MyDatabase(Context c){
+        super(c,DB_NAME,null,1);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
