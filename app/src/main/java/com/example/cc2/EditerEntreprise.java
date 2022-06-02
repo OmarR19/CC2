@@ -76,12 +76,12 @@ public class EditerEntreprise extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 Entreprise e = etrp.get(sp.getSelectedItemPosition());
 
-                p.setLibelle(elib.getText().toString());
-                p.setFamille(efam.getText().toString());
-                p.setPrixAchat(Double.valueOf(epa.getText().toString()));
-                p.setPrixVente(Double.valueOf(epv.getText().toString()));
+                e.setRaisonSoc(ed11.getText().toString());
+                e.setAdresse(ed22.getText().toString());
+                e.setCapital(Double.valueOf(ed33.getText().toString()));
 
-                if(MyDatabase.update_produit(db.getWritableDatabase(),p)==-1)
+
+                if(MyDatabase.UpdateEntreprise(db.getWritableDatabase(),e);==-1)
                     Toast.makeText(EditerEntreprise.this, "Modification echoue", Toast.LENGTH_SHORT).show();
                 else
                     Toast.makeText(EditerEntreprise.this, "Modification reussie", Toast.LENGTH_SHORT).show();
