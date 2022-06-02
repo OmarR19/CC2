@@ -65,5 +65,40 @@ public class EditerEntreprise extends AppCompatActivity {
             });
         }
 
+    public void Modifier(View view) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(EditerEntreprise.this);
+        alert.setTitle("Modifier Entreprise");
+        alert.setMessage("Voulez-vous modifier l'entreprise ?");
+
+
+        alert.setPositiveButton("Modifier", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Entreprise e = etrp.get(sp.getSelectedItemPosition());
+
+                p.setLibelle(elib.getText().toString());
+                p.setFamille(efam.getText().toString());
+                p.setPrixAchat(Double.valueOf(epa.getText().toString()));
+                p.setPrixVente(Double.valueOf(epv.getText().toString()));
+
+                if(MyDatabase.update_produit(db.getWritableDatabase(),p)==-1)
+                    Toast.makeText(EditerEntreprise.this, "Modification echoue", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(EditerEntreprise.this, "Modification reussie", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        alert.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(EditerEntreprise.this, "Operation annulee", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        alert.show();
+    }
+
+}
 
 }
