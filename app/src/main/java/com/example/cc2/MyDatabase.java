@@ -54,5 +54,10 @@ public class MyDatabase extends SQLiteOpenHelper {
         db.update(TABLE_NAME,ct,"id="+e.getId(),null);
     }
 
+    public static int voidDeleteEntreprise(SQLiteDatabase db, int id){
+
+        return db.delete(TABLE_NAME,"id="+id,null);
+    }
+
 
 }
