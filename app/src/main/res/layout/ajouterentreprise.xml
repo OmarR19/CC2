@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/ed2"
         android:layout_below="@id/ed1"
-        android:hint="Taper votre Raison Sociale....">
+        android:hint="Taper votre Adresse...">
 
     </EditText>
 
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/ed3"
         android:layout_below="@id/ed2"
-        android:hint="Taper votre Raison Sociale....">
+        android:hint="Taper votre Capitale...">
 
 
 

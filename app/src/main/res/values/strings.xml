@@ -5,4 +5,12 @@
     <string name="btnEditer">Editer une Entreprise</string>
     <string name="btnListe">Liste de tous les Entreprise</string>
 
+    <string name="ed1">Taper votre Raison Sociale</string>
+    <string name="ed2">Taper votre Adresse</string>
+    <string name="ed3">Taper votre Capitale</string>
+
+    <string name="btnaa">Enregistrer</string>
+    <string name="btnbb">Annuler</string>
+
+
 </resources>
