@@ -8,7 +8,7 @@
         <item name="android:textSize">35sp</item>
         <item name="android:padding">10sp</item>
         <item name="android:background">@drawable/forme</item>
-        <item name="android:textColor">#9F7A7A</item>
+        <item name="android:textColor">#F1D41E</item>
     </style>
 
     <style name="btnEditer" parent="android:Widget.Button">
@@ -18,7 +18,7 @@
         <item name="android:textSize">35sp</item>
         <item name="android:padding">10sp</item>
         <item name="android:background">@drawable/forme</item>
-        <item name="android:textColor">#9F7A7A</item>
+        <item name="android:textColor">#F1D41E</item>
     </style>
 
     <style name="btnListe" parent="android:Widget.Button">
@@ -28,7 +28,7 @@
         <item name="android:textSize">35sp</item>
         <item name="android:padding">10sp</item>
         <item name="android:background">@drawable/forme</item>
-        <item name="android:textColor">#9F7A7A</item>
+        <item name="android:textColor">#F1D41E</item>
     </style>
 
     <style name="Les_deuxieme_boutons" parent="android:Widget.EditText">

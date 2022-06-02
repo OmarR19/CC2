@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ajouter une Entreprise"
+        style="@style/btnAjouter"
         android:id="@+id/btnAjouter">
 
     </Button>
@@ -19,6 +20,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/btnEditer"
         android:text="Editer une Entreprise"
         android:id="@+id/btnEditer">
 
@@ -28,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Liste de tous les Entreprises"
+        style="@style/btnListe"
         android:id="@+id/btnListe">
 
     </Button>
