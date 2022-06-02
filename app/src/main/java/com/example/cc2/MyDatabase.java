@@ -1,5 +1,6 @@
 package com.example.cc2;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -27,6 +28,18 @@ public class MyDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
+
+    public static void AddEntreprise(SQLiteDatabase db, Entreprise e){
+
+            ContentValues ct = new ContentValues();
+            ct.put(String.valueOf(COL1),e.getId());
+            ct.put(COL2,e.getRaisonSoc());
+            ct.put(e.getAdresse(), COL3);
+            ct.put(String.valueOf(COL4),e.getCapital());
+
+         db.insert(TABLE_NAME,null, ct);
 
     }
 
